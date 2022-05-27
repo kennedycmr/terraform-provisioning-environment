@@ -1,0 +1,20 @@
+# This file contains environment variables that will be exported when terraform
+# is setup. No need to run this script manually.
+# Below enter any variables you need to have setup. 
+# All variables will automatically be exported as Terraform style TF_VAR_ also.
+# There is no need for you to manually create TF_VAR_ style variables.
+
+# Required variables
+export GCP_PROJECT_ID=mygcpprojectid
+export BITBUCKET_CLONE_DIR=/workdir
+export TERRAFORMSTATE_BUCKET_NAME=terraformstate-${GCP_PROJECT_ID}
+
+# Optional or any other variables you need
+export GCP_SA_KEYS=${BITBUCKET_CLONE_DIR}/test/deploy.keys.json
+export BITBUCKET_REPO_SLUG=myrepo
+export BITBUCKET_WORKSPACE=mycompany_corp
+export BITBUCKET_DEPLOYMENT_ENVIRONMENT_UUID=xxxxxx-xxxx-xxxx-xxxx-xxxx
+export BITBUCKET_REPO_UUID=xxxxxx-xxxx-xxxxx-xxxxx-xxxxx
+export BITBUCKET_REPO_OWNER_UUID=xxxxxx-xxxx-xxxx-xxxx-xxxx
+export TERRAFORM_ACTION=plan
+
